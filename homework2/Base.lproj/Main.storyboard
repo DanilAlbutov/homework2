@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vir-g2-PGI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CatsController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="CatsController" customClass="ViewController" customModule="homework2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какой ты котик?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w18-De-a8M">
+                                <rect key="frame" x="57" y="96" width="300" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="q7I-QE-CtC"/>
+                                    <constraint firstAttribute="height" constant="150" id="vmV-VT-Cs4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o6R-Wx-HvR">
+                                <rect key="frame" x="107" y="346" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="4Po-CJ-WZC"/>
+                                    <constraint firstAttribute="height" constant="100" id="HAK-od-S19"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Начать"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Начать">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" red="0.90196073060000004" green="0.80392158030000005" blue="0.43921568989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.84705877299999999" green="0.39215683940000001" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="o6R-Wx-HvR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8Wj-Rj-3ti"/>
+                            <constraint firstItem="o6R-Wx-HvR" firstAttribute="top" secondItem="w18-De-a8M" secondAttribute="bottom" constant="100" id="9kp-6r-1IK"/>
+                            <constraint firstItem="w18-De-a8M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="zkO-5v-1Fz"/>
+                            <constraint firstItem="w18-De-a8M" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="96" id="zrW-z6-AQp"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="cat" selectedImage="cat_selected" id="ICL-5c-cX8"/>
+                    <navigationItem key="navigationItem" id="NBX-OO-xAY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2000.0000000000002" y="-77.008928571428569"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="JMR-cf-6vY">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="BM7-e3-Uhs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="TW9-DV-R3p"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Xf7-9l-alS">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="displayP3"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="mKP-dG-IoU"/>
+                        <segue destination="b6E-Tb-2Gm" kind="relationship" relationship="viewControllers" id="Z2Z-gO-fls"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BYN-Xy-tfp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1107" y="126"/>
+        </scene>
+        <!--DogsController-->
+        <scene sceneID="kOM-O9-hAW">
+            <objects>
+                <viewController id="b6E-Tb-2Gm" userLabel="DogsController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eUc-e2-rpI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какой  ты песик?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHE-nn-wXX">
+                                <rect key="frame" x="57" y="96" width="300" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="04Z-rR-hWj"/>
+                                    <constraint firstAttribute="height" constant="150" id="qnY-Dc-TT3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MMv-wo-cQm">
+                                <rect key="frame" x="107" y="346" width="200" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ebZ-kN-q3U"/>
+                                    <constraint firstAttribute="width" constant="200" id="tAJ-1e-p5l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Начать"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Начать">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="35"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                    <color key="baseBackgroundColor" red="0.84705877299999999" green="0.39215683940000001" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qcD-3J-LvV"/>
+                        <color key="backgroundColor" red="0.90196073060000004" green="0.80392158030000005" blue="0.43921568989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="MMv-wo-cQm" firstAttribute="top" secondItem="gHE-nn-wXX" secondAttribute="bottom" constant="100" id="3Ps-2Y-0uy"/>
+                            <constraint firstItem="MMv-wo-cQm" firstAttribute="centerX" secondItem="qcD-3J-LvV" secondAttribute="centerX" id="3hG-HP-d95"/>
+                            <constraint firstItem="gHE-nn-wXX" firstAttribute="centerX" secondItem="qcD-3J-LvV" secondAttribute="centerX" id="Cg0-LG-KA8"/>
+                            <constraint firstItem="gHE-nn-wXX" firstAttribute="top" secondItem="eUc-e2-rpI" secondAttribute="top" constant="96" id="X9e-zB-wrU"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="dog" selectedImage="dog_seelected" id="hn4-qI-kDg"/>
+                    <navigationItem key="navigationItem" title="Title" id="uIb-BQ-csn"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tA8-cQ-w99" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2000.0000000000002" y="610.71428571428567"/>
+        </scene>
+        <!--NavigationController-->
+        <scene sceneID="509-KG-PCm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vir-g2-PGI" userLabel="NavigationController" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="cRK-ei-7HL"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xqU-Xz-fr2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BM7-e3-Uhs" kind="relationship" relationship="rootViewController" id="4iV-1R-Iqv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q4t-oi-KSv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="174" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cat" width="50" height="50"/>
+        <image name="cat_selected" width="50" height="50"/>
+        <image name="dog" width="50" height="50"/>
+        <image name="dog_seelected" width="50" height="50"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
