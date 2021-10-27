@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D48CAD127298D36000C70C7 /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48CAD027298D36000C70C7 /* CatViewController.swift */; };
+		8D48CAD327298D7B000C70C7 /* OneQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48CAD227298D7B000C70C7 /* OneQuestionViewController.swift */; };
+		8D48CAD7272994DC000C70C7 /* QwuestionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48CAD6272994DC000C70C7 /* QwuestionBuilder.swift */; };
+		8D48CAD92729AE2C000C70C7 /* TwoQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48CAD82729AE2C000C70C7 /* TwoQuestionViewController.swift */; };
 		8DEC346F272870BC00AAD13E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC346E272870BC00AAD13E /* AppDelegate.swift */; };
 		8DEC3473272870BC00AAD13E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC3472272870BC00AAD13E /* ViewController.swift */; };
 		8DEC3476272870BC00AAD13E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEC3474272870BC00AAD13E /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8D48CAD027298D36000C70C7 /* CatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
+		8D48CAD227298D7B000C70C7 /* OneQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneQuestionViewController.swift; sourceTree = "<group>"; };
+		8D48CAD6272994DC000C70C7 /* QwuestionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QwuestionBuilder.swift; sourceTree = "<group>"; };
+		8D48CAD82729AE2C000C70C7 /* TwoQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoQuestionViewController.swift; sourceTree = "<group>"; };
 		8DEC346B272870BC00AAD13E /* homework2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEC346E272870BC00AAD13E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DEC3472272870BC00AAD13E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +68,10 @@
 				8DEC3477272870BD00AAD13E /* Assets.xcassets */,
 				8DEC3479272870BD00AAD13E /* LaunchScreen.storyboard */,
 				8DEC347C272870BD00AAD13E /* Info.plist */,
+				8D48CAD027298D36000C70C7 /* CatViewController.swift */,
+				8D48CAD227298D7B000C70C7 /* OneQuestionViewController.swift */,
+				8D48CAD6272994DC000C70C7 /* QwuestionBuilder.swift */,
+				8D48CAD82729AE2C000C70C7 /* TwoQuestionViewController.swift */,
 			);
 			path = homework2;
 			sourceTree = "<group>";
@@ -137,6 +149,10 @@
 			files = (
 				8DEC3473272870BC00AAD13E /* ViewController.swift in Sources */,
 				8DEC346F272870BC00AAD13E /* AppDelegate.swift in Sources */,
+				8D48CAD127298D36000C70C7 /* CatViewController.swift in Sources */,
+				8D48CAD327298D7B000C70C7 /* OneQuestionViewController.swift in Sources */,
+				8D48CAD7272994DC000C70C7 /* QwuestionBuilder.swift in Sources */,
+				8D48CAD92729AE2C000C70C7 /* TwoQuestionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
