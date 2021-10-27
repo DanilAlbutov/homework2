@@ -22,7 +22,7 @@ class ResultScreenViewController: UIViewController {
         
         for v in views {
             if let imgView = v as? UIImageView {
-                imgView.image = questionsContainer.questionList[3].qestionImageView.image
+                //imgView.image = questionsContainer.questionList[3].qestionImageView.image
             }
         }
         //myImageView.image = questionsContainer.questionList[0].qestionImageView.image
