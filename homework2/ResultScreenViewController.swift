@@ -18,13 +18,7 @@ class ResultScreenViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         
-        let views = stackViews[0].arrangedSubviews
-        
-        for v in views {
-            if let imgView = v as? UIImageView {
-                //imgView.image = questionsContainer.questionList[3].qestionImageView.image
-            }
-        }
+        fillData()
         //myImageView.image = questionsContainer.questionList[0].qestionImageView.image
         
         // Do any additional setup after loading the view.
@@ -45,7 +39,20 @@ class ResultScreenViewController: UIViewController {
     
     func fillData(){
         for i in stackViews.indices{
+            let views = stackViews[i].arrangedSubviews
             
+            for v in views {
+                if let imgView = v as? UIImageView {
+                    imgView.image = questionsContainer.questionList[i].qestionImageView.image
+                }
+                if let stackView = v as? UIStackView {
+                    if let labels = stackView.arrangedSubviews as? [UILabel] {
+                        labels[0].text = " Ваш ответ: \(questionsContainer.questionList[i].resultAnswer)"
+                        labels[1].text = " Правильный ответ : \(questionsContainer.questionList[i].rightAnswer)"
+                    }
+                    
+                }
+            }
         }
     }
     
