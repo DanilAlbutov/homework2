@@ -14,7 +14,7 @@ class FiveQuestionViewController: UIViewController {
     @IBOutlet var answerButtonList: [UIButton]!
     var questionsContainer: QwuestionBuilder!
     var resultAns = ""
-    var rightAns = "Авспом"
+    var rightAns = "Сенбердель"
     
     
     override func viewDidLoad() {
