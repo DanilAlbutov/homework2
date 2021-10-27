@@ -15,10 +15,11 @@ class OneQuestionViewController: UIViewController {
     var questionsContainer: QwuestionBuilder!
     var resultAns = ""
     var rightAns = "Джеĸ-а-Пу"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        self.navigationItem.setHidesBackButton(true, animated: true)
         
         
         // Do any additional setup after loading the view.

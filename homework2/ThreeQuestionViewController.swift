@@ -1,5 +1,5 @@
 //
-//  TwoQuestionViewController.swift
+//  ThreeQuestionViewController.swift
 //  homework2
 //
 //  Created by Данил Албутов on 27.10.2021.
@@ -7,15 +7,16 @@
 
 import UIKit
 
-class TwoQuestionViewController: UIViewController {
+class ThreeQuestionViewController: UIViewController {
 
     var questionsContainer: QwuestionBuilder!
     var resultAns = ""
-    var rightAns = "Лабрадудль"
+    var rightAns = "Чаусĸи"
     
     @IBOutlet weak var buttonNext: UIButton!
     @IBOutlet weak var questionImage: UIImageView!
     @IBOutlet var answerButtonList: [UIButton]!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,23 +25,23 @@ class TwoQuestionViewController: UIViewController {
     }
     
     @IBAction func onButtonClick(_ sender: UIButton) {
-        let OneControllerObject = OneQuestionViewController()
+        let tempObj = OneQuestionViewController()
         if sender == buttonNext {
-            OneControllerObject.saveQuestion(queCont: questionsContainer, rightAnswer: rightAns, resultAnswer: resultAns, btnArr: answerButtonList, img: questionImage)
+            tempObj.saveQuestion(queCont: questionsContainer, rightAnswer: rightAns, resultAnswer: resultAns, btnArr: answerButtonList, img: questionImage)
         } else {
             
-            resultAns = OneControllerObject.changeButtonState(btnArr: answerButtonList, button: sender)
+            resultAns = tempObj.changeButtonState(btnArr: answerButtonList, button: sender)
         }
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "fromTwoToThreeQuestion" {
-                    if let question3Controller = segue.destination as?  ThreeQuestionViewController{
-                        question3Controller.questionsContainer = self.questionsContainer
-                        
+        if segue.identifier == "fromThreeToFourQuestion" {
+                    if let question4Controller = segue.destination as?  FourQuestionViewController{
+                        question4Controller.questionsContainer = self.questionsContainer
                     }
                 }
     }
+
 
 }
