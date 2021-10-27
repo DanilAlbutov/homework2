@@ -29,30 +29,36 @@ class OneQuestionViewController: UIViewController {
     @IBAction func onButtonClick(_ sender: UIButton) {
         
         if sender == buttonNext {
-            saveQuestion(rightAnswer: rightAns, resultAnswer: resultAns, btnArr: answerButtonList, img: questionImage)
+            saveQuestion(queCont: questionsContainer, rightAnswer: rightAns, resultAnswer: resultAns, btnArr: answerButtonList, img: questionImage)
         } else {
-            changeButtonState(btnArr: answerButtonList, button: sender)
+            resultAns = changeButtonState(btnArr: answerButtonList, button: sender)
         }
         
     }
     
-    func saveQuestion(rightAnswer: String, resultAnswer: String, btnArr: [UIButton], img: UIImageView){
+    func saveQuestion(queCont: QwuestionBuilder,
+                      rightAnswer: String,
+                      resultAnswer: String,
+                      btnArr: [UIButton],
+                      img: UIImageView){
         var answerList: [String] = []
-        for item in answerButtonList {
+        for item in btnArr {
             answerList.append((item.titleLabel?.text)!)
         }
-        questionsContainer.saveNewQuestion(qestionImageView: questionImage, resultAnswer: resultAnswer, rightAnswer: rightAnswer, answerOptions: answerList)
+        queCont.saveNewQuestion(qestionImageView: img, resultAnswer: resultAnswer, rightAnswer: rightAnswer, answerOptions: answerList)
     }
     
-    func changeButtonState(btnArr: [UIButton], button: UIButton){
+    func changeButtonState(btnArr: [UIButton], button: UIButton) -> String{
+        var res = ""
         for i in btnArr.indices {
             if btnArr[i] == button {
                 btnArr[i].isEnabled = false
-                resultAns = (button.titleLabel?.text)!
+                res = (button.titleLabel?.text)!
             } else{
                 btnArr[i].isEnabled = true
             }
         }
+        return res
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

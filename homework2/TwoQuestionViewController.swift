@@ -26,10 +26,10 @@ class TwoQuestionViewController: UIViewController {
     @IBAction func onButtonClick(_ sender: UIButton) {
         let tempObj = OneQuestionViewController()
         if sender == buttonNext {
-            tempObj.saveQuestion(rightAnswer: rightAns, resultAnswer: resultAns, btnArr: answerButtonList, img: questionImage)
+            tempObj.saveQuestion(queCont: questionsContainer, rightAnswer: rightAns, resultAnswer: resultAns, btnArr: answerButtonList, img: questionImage)
         } else {
             
-            tempObj.changeButtonState(btnArr: answerButtonList, button: sender)
+            resultAns = tempObj.changeButtonState(btnArr: answerButtonList, button: sender)
         }
         
     }
