@@ -9,7 +9,7 @@ import UIKit
 
 class DogViewController: UIViewController {
 
-    var questions: QwuestionBuilder = QwuestionBuilder()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,7 +19,8 @@ class DogViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "fromCatToQuestion" {
                     if let question1Controller = segue.destination as?  OneQuestionViewController{
-                        question1Controller.questionsContainer = self.questions
+                        let questions: QwuestionBuilder = QwuestionBuilder()
+                        question1Controller.questionsContainer = questions
                         question1Controller.isTestAboutDogs = true
                     }
                 }
