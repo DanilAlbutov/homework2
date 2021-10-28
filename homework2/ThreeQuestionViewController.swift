@@ -13,9 +13,9 @@ class ThreeQuestionViewController: UIViewController {
     var resultAns = ""
     var rightAns = "Чаусĸи"
     var isTestAboutDogs = true
-    @IBOutlet weak var buttonNext: UIButton!
-    @IBOutlet weak var questionImage: UIImageView!
-    @IBOutlet var answerButtonList: [UIButton]!
+    @IBOutlet private weak var buttonNext: UIButton!
+    @IBOutlet private weak var questionImage: UIImageView!
+    @IBOutlet private var answerButtonList: [UIButton]!
     
     
     override func viewDidLoad() {

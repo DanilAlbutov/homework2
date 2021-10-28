@@ -9,9 +9,9 @@ import UIKit
 
 class OneQuestionViewController: UIViewController {
     
-    @IBOutlet weak var buttonNext: UIButton!
-    @IBOutlet weak var questionImage: UIImageView!
-    @IBOutlet var answerButtonList: [UIButton]!
+    @IBOutlet private weak var buttonNext: UIButton!
+    @IBOutlet private weak var questionImage: UIImageView!
+    @IBOutlet private var answerButtonList: [UIButton]!
     var questionsContainer: QwuestionBuilder!
     var resultAns = ""
     var rightAns = "Джеĸ-а-Пу"

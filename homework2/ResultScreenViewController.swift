@@ -12,27 +12,23 @@ class ResultScreenViewController: UIViewController {
    
     var questionsContainer: QwuestionBuilder!
     var mark = 0
-    @IBOutlet var stackViews: [UIStackView]!
-    @IBOutlet weak var markLabel: UILabel!
+    @IBOutlet private var stackViews: [UIStackView]!
+    @IBOutlet private weak var markLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
         
         fillData()
-        //myImageView.image = questionsContainer.questionList[0].qestionImageView.image
         
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func menuButton(_ sender: Any) {
-        print("0000")
-        
         if let viewControllers = self.navigationController?.viewControllers{
             for vc in viewControllers{
                 if vc is UITabBarController{
                     self.navigationController?.popToViewController(vc, animated: true)
-                    print("1337")
+                    
                 }
             }
         }
@@ -49,7 +45,7 @@ class ResultScreenViewController: UIViewController {
                 if let stackView = v as? UIStackView {
                     if let labels = stackView.arrangedSubviews as? [UILabel] {
                         labels[0].text = " Ваш ответ: \(questionsContainer.questionList[i].resultAnswer)"
-                        labels[1].text = " Правильный ответ : \(questionsContainer.questionList[i].rightAnswer)"
+                        labels[1].text = " Правильный \n ответ : \(questionsContainer.questionList[i].rightAnswer)"
                         if checkAnswers(str1: questionsContainer.questionList[i].resultAnswer, str2: questionsContainer.questionList[i].rightAnswer) {
                             labels[0].textColor = .green
                         }
