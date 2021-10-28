@@ -76,9 +76,9 @@ class ResultScreenViewController: UIViewController {
     
     func rate() {
         switch mark {
-        case 1...2:
+        case 0...1:
             markLabel.textColor = .red
-        case 3...4:
+        case 2...4:
             markLabel.textColor = .yellow
         case 5:
             markLabel.textColor = .green

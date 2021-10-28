@@ -12,7 +12,7 @@ class ThreeQuestionViewController: UIViewController {
     var questionsContainer: QwuestionBuilder!
     var resultAns = ""
     var rightAns = "Чаусĸи"
-    
+    var isTestAboutDogs = true
     @IBOutlet weak var buttonNext: UIButton!
     @IBOutlet weak var questionImage: UIImageView!
     @IBOutlet var answerButtonList: [UIButton]!
@@ -21,6 +21,7 @@ class ThreeQuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
+        checkTest()
         // Do any additional setup after loading the view.
     }
     
@@ -35,10 +36,17 @@ class ThreeQuestionViewController: UIViewController {
         
     }
     
+    func checkTest(){
+        if (!isTestAboutDogs) {
+            rightAns = "Завтраĸ у Тиффани"
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "fromThreeToFourQuestion" {
                     if let question4Controller = segue.destination as?  FourQuestionViewController{
                         question4Controller.questionsContainer = self.questionsContainer
+                        question4Controller.isTestAboutDogs = self.isTestAboutDogs
                     }
                 }
     }

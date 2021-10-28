@@ -15,11 +15,12 @@ class FiveQuestionViewController: UIViewController {
     var questionsContainer: QwuestionBuilder!
     var resultAns = ""
     var rightAns = "Сенбердель"
-    
+    var isTestAboutDogs = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
+        checkTest()
         // Do any additional setup after loading the view.
     }
     
@@ -33,6 +34,12 @@ class FiveQuestionViewController: UIViewController {
             resultAns = tempObj.changeButtonState(btnArr: answerButtonList, button: sender)
         }
         
+    }
+    
+    func checkTest(){
+        if (!isTestAboutDogs) {
+            rightAns = "Гарри Поттер и тайная ĸомната"
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

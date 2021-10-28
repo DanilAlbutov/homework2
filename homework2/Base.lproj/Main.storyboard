@@ -12,7 +12,7 @@
         <!--CatsController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="dogId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="CatsController" customClass="CatViewController" customModule="homework2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dogId" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="CatsController" customClass="DogViewController" customModule="homework2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,7 +85,7 @@
         <!--DogsController-->
         <scene sceneID="kOM-O9-hAW">
             <objects>
-                <viewController id="b6E-Tb-2Gm" userLabel="DogsController" sceneMemberID="viewController">
+                <viewController id="b6E-Tb-2Gm" userLabel="DogsController" customClass="CatViewController" customModule="homework2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eUc-e2-rpI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -113,6 +113,9 @@
                                     <color key="baseForegroundColor" systemColor="labelColor"/>
                                     <color key="baseBackgroundColor" red="0.84705877299999999" green="0.39215683940000001" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Isr-XI-Apd" kind="show" identifier="fromDogToQuestion" id="hyF-c7-EMQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qcD-3J-LvV"/>
@@ -986,9 +989,567 @@
             </objects>
             <point key="canvasLocation" x="7255.0724637681169" y="123.21428571428571"/>
         </scene>
+        <!--One Question View Controller-->
+        <scene sceneID="shT-0q-cMf">
+            <objects>
+                <viewController id="Isr-XI-Apd" customClass="OneQuestionViewController" customModule="homework2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6bF-pR-XTR">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat1" translatesAutoresizingMaskIntoConstraints="NO" id="qyp-kr-3ib">
+                                <rect key="frame" x="57" y="118" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="YUd-CQ-SD6"/>
+                                    <constraint firstAttribute="width" constant="300" id="wAc-ua-acA"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Us9-gZ-tGV">
+                                <rect key="frame" x="107" y="398" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Q5G-l4-0ll"/>
+                                    <constraint firstAttribute="width" constant="200" id="rDt-TU-VHE"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Назад в будущее">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="22.667000000000002"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="Isr-XI-Apd" eventType="touchUpInside" id="zHL-VY-RQA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KDa-eC-HUt">
+                                <rect key="frame" x="107" y="445" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="6fX-8O-0N6"/>
+                                    <constraint firstAttribute="width" constant="200" id="NDX-09-rza"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Чужой">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="22.667000000000002"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="Isr-XI-Apd" eventType="touchUpInside" id="WuN-O9-2Aa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ga8-TY-TFd">
+                                <rect key="frame" x="107" y="350" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="QhH-mI-lDy"/>
+                                    <constraint firstAttribute="width" constant="200" id="WcR-OO-NNK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Терминатор">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="22.667000000000002"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="Isr-XI-Apd" eventType="touchUpInside" id="faR-2T-1wJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L4L-1p-jc4">
+                                <rect key="frame" x="107" y="513" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="gSf-dw-coo"/>
+                                    <constraint firstAttribute="height" constant="40" id="oIv-Y4-g6m"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ответить">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="22.667000000000002"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="Isr-XI-Apd" eventType="touchUpInside" id="NqV-SJ-OhF"/>
+                                    <segue destination="GTm-hr-UIY" kind="show" identifier="fromOneQwestionToSecond" id="Pkt-3Y-J4Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="WsG-bL-uCU"/>
+                        <color key="backgroundColor" red="0.90196073060000004" green="0.80392158030000005" blue="0.43921568989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Us9-gZ-tGV" firstAttribute="top" secondItem="Ga8-TY-TFd" secondAttribute="bottom" constant="8" symbolic="YES" id="ABr-d8-cox"/>
+                            <constraint firstItem="Ga8-TY-TFd" firstAttribute="centerX" secondItem="WsG-bL-uCU" secondAttribute="centerX" id="CSd-41-c2N"/>
+                            <constraint firstItem="Ga8-TY-TFd" firstAttribute="top" secondItem="6bF-pR-XTR" secondAttribute="top" constant="350" id="FTo-IG-Ixe"/>
+                            <constraint firstItem="L4L-1p-jc4" firstAttribute="centerX" secondItem="WsG-bL-uCU" secondAttribute="centerX" id="Mie-Dt-jp3"/>
+                            <constraint firstItem="qyp-kr-3ib" firstAttribute="top" secondItem="WsG-bL-uCU" secondAttribute="top" constant="30" id="NQy-wB-JG5"/>
+                            <constraint firstItem="Us9-gZ-tGV" firstAttribute="centerX" secondItem="WsG-bL-uCU" secondAttribute="centerX" id="Wk9-Fo-ojs"/>
+                            <constraint firstItem="KDa-eC-HUt" firstAttribute="centerX" secondItem="WsG-bL-uCU" secondAttribute="centerX" id="XAV-oF-mGi"/>
+                            <constraint firstItem="qyp-kr-3ib" firstAttribute="centerX" secondItem="WsG-bL-uCU" secondAttribute="centerX" id="hO8-eO-r4c"/>
+                            <constraint firstItem="L4L-1p-jc4" firstAttribute="leading" secondItem="KDa-eC-HUt" secondAttribute="leading" id="j7Q-SS-9cv"/>
+                            <constraint firstItem="L4L-1p-jc4" firstAttribute="top" secondItem="KDa-eC-HUt" secondAttribute="bottom" constant="20" id="kMh-n1-bmB"/>
+                            <constraint firstItem="KDa-eC-HUt" firstAttribute="top" secondItem="Us9-gZ-tGV" secondAttribute="bottom" constant="7" id="rZg-7X-3NT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sWb-pC-96I"/>
+                    <connections>
+                        <outlet property="buttonNext" destination="L4L-1p-jc4" id="0GR-M2-jEP"/>
+                        <outlet property="questionImage" destination="qyp-kr-3ib" id="OI4-cz-ui4"/>
+                        <outletCollection property="answerButtonList" destination="Ga8-TY-TFd" collectionClass="NSMutableArray" id="qt3-qr-uSy"/>
+                        <outletCollection property="answerButtonList" destination="Us9-gZ-tGV" collectionClass="NSMutableArray" id="Wes-Gq-BWg"/>
+                        <outletCollection property="answerButtonList" destination="KDa-eC-HUt" collectionClass="NSMutableArray" id="o4n-Rk-O2f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="efr-ev-wkx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3119" y="611"/>
+        </scene>
+        <!--Two Question View Controller-->
+        <scene sceneID="p60-Gk-s0V">
+            <objects>
+                <viewController id="GTm-hr-UIY" customClass="TwoQuestionViewController" customModule="homework2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o0o-oI-7Pq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat2" translatesAutoresizingMaskIntoConstraints="NO" id="Xia-Ih-I72">
+                                <rect key="frame" x="57" y="118" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Yxl-4K-KMO"/>
+                                    <constraint firstAttribute="height" constant="200" id="qUw-pb-Kej"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tzl-up-txU">
+                                <rect key="frame" x="107" y="398" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Xvv-Ro-c6i"/>
+                                    <constraint firstAttribute="height" constant="40" id="ZKC-fu-2Tc"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Алиса в Стране чудес">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="17.666999816894531"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="GTm-hr-UIY" eventType="touchUpInside" id="mja-sq-520"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wS-ve-AqJ">
+                                <rect key="frame" x="107" y="445" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dq9-SH-O5Y"/>
+                                    <constraint firstAttribute="width" constant="200" id="qqR-sl-Y9P"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сабрина - маленьĸая ведьма">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="17.666999816894531"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="GTm-hr-UIY" eventType="touchUpInside" id="9if-zJ-7OU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SuF-yp-5my">
+                                <rect key="frame" x="107" y="350" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="LCW-j9-B4P"/>
+                                    <constraint firstAttribute="height" constant="40" id="XVa-oK-MCT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Мастер и Маргарита">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="17.666999816894531"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="GTm-hr-UIY" eventType="touchUpInside" id="gFq-9p-Q12"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qLM-lb-ads">
+                                <rect key="frame" x="107" y="513" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="JfA-qd-ldJ"/>
+                                    <constraint firstAttribute="height" constant="40" id="MOb-Q0-HSB"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ответить">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="22.667000000000002"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="GTm-hr-UIY" eventType="touchUpInside" id="a5U-K6-cQJ"/>
+                                    <segue destination="MsW-gW-ByD" kind="show" identifier="fromTwoToThreeQuestion" id="0vx-KB-v4W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KiG-bS-J2P"/>
+                        <color key="backgroundColor" red="0.90196073060000004" green="0.80392158030000005" blue="0.43921568989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="qLM-lb-ads" firstAttribute="centerX" secondItem="KiG-bS-J2P" secondAttribute="centerX" id="0hJ-qw-kVB"/>
+                            <constraint firstItem="2wS-ve-AqJ" firstAttribute="top" secondItem="Tzl-up-txU" secondAttribute="bottom" constant="7" id="3gQ-O2-WD8"/>
+                            <constraint firstItem="2wS-ve-AqJ" firstAttribute="centerX" secondItem="KiG-bS-J2P" secondAttribute="centerX" id="9EV-qF-GKO"/>
+                            <constraint firstItem="qLM-lb-ads" firstAttribute="leading" secondItem="2wS-ve-AqJ" secondAttribute="leading" id="ASw-xe-2QG"/>
+                            <constraint firstItem="Xia-Ih-I72" firstAttribute="centerX" secondItem="KiG-bS-J2P" secondAttribute="centerX" id="IRN-Rv-s0U"/>
+                            <constraint firstItem="Tzl-up-txU" firstAttribute="top" secondItem="SuF-yp-5my" secondAttribute="bottom" constant="8" symbolic="YES" id="J1e-rg-bf8"/>
+                            <constraint firstItem="Tzl-up-txU" firstAttribute="centerX" secondItem="KiG-bS-J2P" secondAttribute="centerX" id="Szy-Hk-pNN"/>
+                            <constraint firstItem="SuF-yp-5my" firstAttribute="centerX" secondItem="KiG-bS-J2P" secondAttribute="centerX" id="Vy8-Ou-CBE"/>
+                            <constraint firstItem="Xia-Ih-I72" firstAttribute="top" secondItem="KiG-bS-J2P" secondAttribute="top" constant="30" id="e8b-qn-N9U"/>
+                            <constraint firstItem="qLM-lb-ads" firstAttribute="top" secondItem="2wS-ve-AqJ" secondAttribute="bottom" constant="20" id="fut-CG-ViV"/>
+                            <constraint firstItem="SuF-yp-5my" firstAttribute="top" secondItem="o0o-oI-7Pq" secondAttribute="top" constant="350" id="i7b-fg-6hx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="10S-sv-RrV"/>
+                    <connections>
+                        <outlet property="buttonNext" destination="qLM-lb-ads" id="TV0-J0-VgF"/>
+                        <outlet property="questionImage" destination="Xia-Ih-I72" id="89N-RC-Bho"/>
+                        <outletCollection property="answerButtonList" destination="SuF-yp-5my" collectionClass="NSMutableArray" id="tqG-w3-R7U"/>
+                        <outletCollection property="answerButtonList" destination="Tzl-up-txU" collectionClass="NSMutableArray" id="ZyD-MK-vMh"/>
+                        <outletCollection property="answerButtonList" destination="2wS-ve-AqJ" collectionClass="NSMutableArray" id="Jnp-u4-V7o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZlH-Np-04S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3913" y="611"/>
+        </scene>
+        <!--Three Question View Controller-->
+        <scene sceneID="zSc-WO-DW8">
+            <objects>
+                <viewController id="MsW-gW-ByD" customClass="ThreeQuestionViewController" customModule="homework2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HjC-Np-yhw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat3" translatesAutoresizingMaskIntoConstraints="NO" id="f7G-zP-bfx">
+                                <rect key="frame" x="57" y="118" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="F5w-ln-o3Z"/>
+                                    <constraint firstAttribute="width" constant="300" id="NVA-yK-Jdu"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d3h-GS-drP">
+                                <rect key="frame" x="107" y="398" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="jcz-He-HaX"/>
+                                    <constraint firstAttribute="height" constant="40" id="sLB-um-Koe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Завтраĸ у Тиффани">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="20.666999816894531"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="MsW-gW-ByD" eventType="touchUpInside" id="N9O-2u-2C7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3E-bE-tri">
+                                <rect key="frame" x="107" y="445" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="XDq-d8-6N7"/>
+                                    <constraint firstAttribute="height" constant="40" id="pOf-ux-gpK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Кошачий глаз">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="22.667000000000002"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="MsW-gW-ByD" eventType="touchUpInside" id="V1t-la-0oN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LnH-Bf-jyX">
+                                <rect key="frame" x="107" y="350" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="5dX-UX-CJS"/>
+                                    <constraint firstAttribute="height" constant="40" id="v7V-Ex-k8Y"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Уличный ĸот по ĸличĸе Боб">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="17.666999816894531"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="MsW-gW-ByD" eventType="touchUpInside" id="DqY-VF-SHP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xPU-u9-CSi">
+                                <rect key="frame" x="107" y="513" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="bOt-nm-05s"/>
+                                    <constraint firstAttribute="width" constant="200" id="qea-oE-VDg"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ответить">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="22.667000000000002"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="MsW-gW-ByD" eventType="touchUpInside" id="7Bn-cy-lqJ"/>
+                                    <segue destination="GUE-Aw-K8f" kind="show" identifier="fromThreeToFourQuestion" id="FYJ-1n-I88"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lFT-jG-UcH"/>
+                        <color key="backgroundColor" red="0.90196073060000004" green="0.80392158030000005" blue="0.43921568989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="f7G-zP-bfx" firstAttribute="top" secondItem="lFT-jG-UcH" secondAttribute="top" constant="30" id="33c-aQ-u0u"/>
+                            <constraint firstItem="LnH-Bf-jyX" firstAttribute="centerX" secondItem="lFT-jG-UcH" secondAttribute="centerX" id="9sy-4P-9I8"/>
+                            <constraint firstItem="xPU-u9-CSi" firstAttribute="leading" secondItem="b3E-bE-tri" secondAttribute="leading" id="C8L-Ed-x6T"/>
+                            <constraint firstItem="xPU-u9-CSi" firstAttribute="top" secondItem="b3E-bE-tri" secondAttribute="bottom" constant="20" id="Ey6-WL-3Rs"/>
+                            <constraint firstItem="d3h-GS-drP" firstAttribute="centerX" secondItem="lFT-jG-UcH" secondAttribute="centerX" id="Id6-mD-otr"/>
+                            <constraint firstItem="f7G-zP-bfx" firstAttribute="centerX" secondItem="lFT-jG-UcH" secondAttribute="centerX" id="Mch-pc-4rj"/>
+                            <constraint firstItem="xPU-u9-CSi" firstAttribute="centerX" secondItem="lFT-jG-UcH" secondAttribute="centerX" id="QdP-BK-Va6"/>
+                            <constraint firstItem="d3h-GS-drP" firstAttribute="top" secondItem="LnH-Bf-jyX" secondAttribute="bottom" constant="8" symbolic="YES" id="VeA-Ag-yxd"/>
+                            <constraint firstItem="LnH-Bf-jyX" firstAttribute="top" secondItem="HjC-Np-yhw" secondAttribute="top" constant="350" id="acJ-ul-7CY"/>
+                            <constraint firstItem="b3E-bE-tri" firstAttribute="centerX" secondItem="lFT-jG-UcH" secondAttribute="centerX" id="cxp-Ge-JH2"/>
+                            <constraint firstItem="b3E-bE-tri" firstAttribute="top" secondItem="d3h-GS-drP" secondAttribute="bottom" constant="7" id="rQU-sy-clj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="T5Q-pQ-aER"/>
+                    <connections>
+                        <outlet property="buttonNext" destination="xPU-u9-CSi" id="95N-MY-D7e"/>
+                        <outlet property="questionImage" destination="f7G-zP-bfx" id="PCL-Fo-zfA"/>
+                        <outletCollection property="answerButtonList" destination="LnH-Bf-jyX" collectionClass="NSMutableArray" id="7jV-sB-fGv"/>
+                        <outletCollection property="answerButtonList" destination="d3h-GS-drP" collectionClass="NSMutableArray" id="08k-ce-2Hr"/>
+                        <outletCollection property="answerButtonList" destination="b3E-bE-tri" collectionClass="NSMutableArray" id="dfY-pH-atR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xk0-Ky-ifE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4712" y="611"/>
+        </scene>
+        <!--Four Question View Controller-->
+        <scene sceneID="Icc-EK-xYu">
+            <objects>
+                <viewController id="GUE-Aw-K8f" customClass="FourQuestionViewController" customModule="homework2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NXS-7y-4hs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat4" translatesAutoresizingMaskIntoConstraints="NO" id="TuS-dp-Pwl">
+                                <rect key="frame" x="57" y="118" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Nzi-bs-1gq"/>
+                                    <constraint firstAttribute="width" constant="300" id="unk-3f-SAg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YS-Pe-nF8">
+                                <rect key="frame" x="107" y="398" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="dJR-ze-Bb1"/>
+                                    <constraint firstAttribute="width" constant="200" id="sKZ-oB-hxW"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Мышиная охота">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="22.667000000000002"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="GUE-Aw-K8f" eventType="touchUpInside" id="A2i-8k-gkt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8N-OS-DIn">
+                                <rect key="frame" x="107" y="445" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="ZmB-Pg-BKp"/>
+                                    <constraint firstAttribute="height" constant="40" id="oPk-8K-Ldy"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Кошĸи против собаĸ">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="19.666999816894531"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="GUE-Aw-K8f" eventType="touchUpInside" id="rX0-c4-fzM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vea-YM-9x8">
+                                <rect key="frame" x="107" y="350" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="adb-ao-RRU"/>
+                                    <constraint firstAttribute="height" constant="40" id="goc-Zv-hl9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Стюарт Литтл">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="22.667000000000002"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="GUE-Aw-K8f" eventType="touchUpInside" id="5cD-gF-Wq1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GEZ-PH-SWX">
+                                <rect key="frame" x="107" y="513" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1kh-sx-TzQ"/>
+                                    <constraint firstAttribute="width" constant="200" id="fgb-VC-e1c"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ответить">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="22.667000000000002"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="GUE-Aw-K8f" eventType="touchUpInside" id="QwW-ZW-8bj"/>
+                                    <segue destination="NMg-wD-lRx" kind="show" identifier="fromFourToFiveQuestion" id="jeP-xV-ThY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ka8-8b-ZO6"/>
+                        <color key="backgroundColor" red="0.90196073060000004" green="0.80392158030000005" blue="0.43921568989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="GEZ-PH-SWX" firstAttribute="leading" secondItem="B8N-OS-DIn" secondAttribute="leading" id="0tx-Ra-GOT"/>
+                            <constraint firstItem="GEZ-PH-SWX" firstAttribute="centerX" secondItem="Ka8-8b-ZO6" secondAttribute="centerX" id="2Tv-HN-zir"/>
+                            <constraint firstItem="B8N-OS-DIn" firstAttribute="centerX" secondItem="Ka8-8b-ZO6" secondAttribute="centerX" id="WMV-RQ-N5c"/>
+                            <constraint firstItem="Vea-YM-9x8" firstAttribute="centerX" secondItem="Ka8-8b-ZO6" secondAttribute="centerX" id="X9H-cr-wRp"/>
+                            <constraint firstItem="TuS-dp-Pwl" firstAttribute="top" secondItem="Ka8-8b-ZO6" secondAttribute="top" constant="30" id="eWW-ZA-dyS"/>
+                            <constraint firstItem="9YS-Pe-nF8" firstAttribute="centerX" secondItem="Ka8-8b-ZO6" secondAttribute="centerX" id="emK-ag-He2"/>
+                            <constraint firstItem="TuS-dp-Pwl" firstAttribute="centerX" secondItem="Ka8-8b-ZO6" secondAttribute="centerX" id="gA7-AJ-EYt"/>
+                            <constraint firstItem="GEZ-PH-SWX" firstAttribute="top" secondItem="B8N-OS-DIn" secondAttribute="bottom" constant="20" id="lNV-WT-aUW"/>
+                            <constraint firstItem="9YS-Pe-nF8" firstAttribute="top" secondItem="Vea-YM-9x8" secondAttribute="bottom" constant="8" symbolic="YES" id="oLG-4A-wrZ"/>
+                            <constraint firstItem="B8N-OS-DIn" firstAttribute="top" secondItem="9YS-Pe-nF8" secondAttribute="bottom" constant="7" id="op4-N7-VaB"/>
+                            <constraint firstItem="Vea-YM-9x8" firstAttribute="top" secondItem="NXS-7y-4hs" secondAttribute="top" constant="350" id="x9g-mM-aCs"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="UQZ-80-w5a"/>
+                    <connections>
+                        <outlet property="buttonNext" destination="GEZ-PH-SWX" id="Ktt-FK-gSS"/>
+                        <outlet property="questionImage" destination="TuS-dp-Pwl" id="ZzV-rf-HtN"/>
+                        <outletCollection property="answerButtonList" destination="Vea-YM-9x8" collectionClass="NSMutableArray" id="PeS-n4-WvT"/>
+                        <outletCollection property="answerButtonList" destination="9YS-Pe-nF8" collectionClass="NSMutableArray" id="kBz-aY-G4Q"/>
+                        <outletCollection property="answerButtonList" destination="B8N-OS-DIn" collectionClass="NSMutableArray" id="eGS-Aw-lKR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oPd-RB-7Db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5493" y="611"/>
+        </scene>
+        <!--Five Question View Controller-->
+        <scene sceneID="FMn-EH-XTY">
+            <objects>
+                <viewController id="NMg-wD-lRx" customClass="FiveQuestionViewController" customModule="homework2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qp9-ew-X10">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat5" translatesAutoresizingMaskIntoConstraints="NO" id="zhy-Qj-ODk">
+                                <rect key="frame" x="57" y="118" width="300" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Lf3-Hp-bci"/>
+                                    <constraint firstAttribute="width" constant="300" id="V0y-aK-iSW"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUx-p2-fEG">
+                                <rect key="frame" x="107" y="398" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="DrX-xn-k09"/>
+                                    <constraint firstAttribute="height" constant="40" id="M6p-BL-dCO"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Кладбище домашних животных">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="16.666999816894531"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="NMg-wD-lRx" eventType="touchUpInside" id="oaZ-5E-srW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zJq-Mk-341">
+                                <rect key="frame" x="107" y="445" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Vp0-e4-Ago"/>
+                                    <constraint firstAttribute="height" constant="40" id="kcq-Su-hky"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Гарри Поттер и тайная ĸомната">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="16.666999816894531"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="NMg-wD-lRx" eventType="touchUpInside" id="vJ3-uo-sYp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MCm-Yf-k1g">
+                                <rect key="frame" x="107" y="350" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="Ari-K6-zaq"/>
+                                    <constraint firstAttribute="height" constant="40" id="Kcz-pZ-Q7H"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Альф">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="21.666999816894531"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="NMg-wD-lRx" eventType="touchUpInside" id="IuP-6B-vIr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQa-FI-4a2">
+                                <rect key="frame" x="107" y="513" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="X64-IG-xxh"/>
+                                    <constraint firstAttribute="height" constant="40" id="qEv-Fx-9cu"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ответить">
+                                    <fontDescription key="titleFontDescription" name="Times-Roman" family="Times" pointSize="22.667000000000002"/>
+                                    <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseBackgroundColor" red="0.8392156959" green="0.38823530080000002" blue="0.2352941036" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onButtonClick:" destination="NMg-wD-lRx" eventType="touchUpInside" id="ORm-Kz-MNe"/>
+                                    <segue destination="uvY-U6-WqS" kind="show" identifier="fromFiveToResultScreen" id="DVq-5M-EHl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7I2-nB-Pbn"/>
+                        <color key="backgroundColor" red="0.90196073060000004" green="0.80392158030000005" blue="0.43921568989999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="dQa-FI-4a2" firstAttribute="centerX" secondItem="7I2-nB-Pbn" secondAttribute="centerX" id="0Gg-5b-Ikp"/>
+                            <constraint firstItem="dQa-FI-4a2" firstAttribute="leading" secondItem="zJq-Mk-341" secondAttribute="leading" id="3en-dL-OTf"/>
+                            <constraint firstItem="MCm-Yf-k1g" firstAttribute="centerX" secondItem="7I2-nB-Pbn" secondAttribute="centerX" id="ASb-Zc-YeY"/>
+                            <constraint firstItem="zJq-Mk-341" firstAttribute="top" secondItem="UUx-p2-fEG" secondAttribute="bottom" constant="7" id="BYF-JW-Yow"/>
+                            <constraint firstItem="zhy-Qj-ODk" firstAttribute="centerX" secondItem="7I2-nB-Pbn" secondAttribute="centerX" id="K9L-0C-hi9"/>
+                            <constraint firstItem="MCm-Yf-k1g" firstAttribute="top" secondItem="Qp9-ew-X10" secondAttribute="top" constant="350" id="MNn-EU-Sm1"/>
+                            <constraint firstItem="UUx-p2-fEG" firstAttribute="top" secondItem="MCm-Yf-k1g" secondAttribute="bottom" constant="8" symbolic="YES" id="Qfn-vx-F7Z"/>
+                            <constraint firstItem="zJq-Mk-341" firstAttribute="centerX" secondItem="7I2-nB-Pbn" secondAttribute="centerX" id="XUL-GA-qT5"/>
+                            <constraint firstItem="UUx-p2-fEG" firstAttribute="centerX" secondItem="7I2-nB-Pbn" secondAttribute="centerX" id="i71-AB-NMb"/>
+                            <constraint firstItem="dQa-FI-4a2" firstAttribute="top" secondItem="zJq-Mk-341" secondAttribute="bottom" constant="20" id="iAt-CT-kCf"/>
+                            <constraint firstItem="zhy-Qj-ODk" firstAttribute="top" secondItem="7I2-nB-Pbn" secondAttribute="top" constant="30" id="wDX-Vf-T4A"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="zHW-PZ-Xuv"/>
+                    <connections>
+                        <outlet property="buttonNext" destination="dQa-FI-4a2" id="fkD-ea-zah"/>
+                        <outlet property="questionImage" destination="zhy-Qj-ODk" id="uDh-EX-m8t"/>
+                        <outletCollection property="answerButtonList" destination="MCm-Yf-k1g" collectionClass="NSMutableArray" id="C2N-om-uDv"/>
+                        <outletCollection property="answerButtonList" destination="UUx-p2-fEG" collectionClass="NSMutableArray" id="vuN-lN-9xa"/>
+                        <outletCollection property="answerButtonList" destination="zJq-Mk-341" collectionClass="NSMutableArray" id="0nt-Pw-dLr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5lN-Rr-T1R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6277" y="611"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DVq-5M-EHl"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="cat" width="50" height="50"/>
+        <image name="cat1" width="586" height="391"/>
+        <image name="cat2" width="1266" height="844"/>
+        <image name="cat3" width="807" height="538"/>
+        <image name="cat4" width="1232" height="821"/>
+        <image name="cat5" width="576" height="384"/>
         <image name="cat_selected" width="50" height="50"/>
         <image name="dog" width="50" height="50"/>
         <image name="dog_seelected" width="50" height="50"/>

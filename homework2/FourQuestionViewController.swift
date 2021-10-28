@@ -15,10 +15,11 @@ class FourQuestionViewController: UIViewController {
     var questionsContainer: QwuestionBuilder!
     var resultAns = ""
     var rightAns = "Авспом"
-    
+    var isTestAboutDogs = true
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.setHidesBackButton(true, animated: true)
+        checkTest()
         // Do any additional setup after loading the view.
     }
     
@@ -34,10 +35,17 @@ class FourQuestionViewController: UIViewController {
         
     }
     
+    func checkTest(){
+        if (!isTestAboutDogs) {
+            rightAns = "Стюарт Литтл"
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "fromFourToFiveQuestion" {
                     if let question5Controller = segue.destination as?  FiveQuestionViewController{
                         question5Controller.questionsContainer = self.questionsContainer
+                        question5Controller.isTestAboutDogs = self.isTestAboutDogs
                     }
                 }
     }

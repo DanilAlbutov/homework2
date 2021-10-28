@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8D48CAD127298D36000C70C7 /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48CAD027298D36000C70C7 /* CatViewController.swift */; };
+		8D48CAD127298D36000C70C7 /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48CAD027298D36000C70C7 /* DogViewController.swift */; };
 		8D48CAD327298D7B000C70C7 /* OneQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48CAD227298D7B000C70C7 /* OneQuestionViewController.swift */; };
 		8D48CAD7272994DC000C70C7 /* QwuestionBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48CAD6272994DC000C70C7 /* QwuestionBuilder.swift */; };
 		8D48CAD92729AE2C000C70C7 /* TwoQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48CAD82729AE2C000C70C7 /* TwoQuestionViewController.swift */; };
@@ -15,6 +15,7 @@
 		8D48CADE2729C3CB000C70C7 /* FourQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48CADD2729C3CB000C70C7 /* FourQuestionViewController.swift */; };
 		8D48CAE02729C703000C70C7 /* FiveQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48CADF2729C703000C70C7 /* FiveQuestionViewController.swift */; };
 		8D48CAE22729C8AC000C70C7 /* ResultScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48CAE12729C8AC000C70C7 /* ResultScreenViewController.swift */; };
+		8D8B714C272AC5DD00983B00 /* CatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8B714B272AC5DD00983B00 /* CatViewController.swift */; };
 		8DEC346F272870BC00AAD13E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEC346E272870BC00AAD13E /* AppDelegate.swift */; };
 		8DEC3476272870BC00AAD13E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8DEC3474272870BC00AAD13E /* Main.storyboard */; };
 		8DEC3478272870BD00AAD13E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEC3477272870BD00AAD13E /* Assets.xcassets */; };
@@ -22,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8D48CAD027298D36000C70C7 /* CatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
+		8D48CAD027298D36000C70C7 /* DogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewController.swift; sourceTree = "<group>"; };
 		8D48CAD227298D7B000C70C7 /* OneQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneQuestionViewController.swift; sourceTree = "<group>"; };
 		8D48CAD6272994DC000C70C7 /* QwuestionBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QwuestionBuilder.swift; sourceTree = "<group>"; };
 		8D48CAD82729AE2C000C70C7 /* TwoQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoQuestionViewController.swift; sourceTree = "<group>"; };
@@ -30,6 +31,7 @@
 		8D48CADD2729C3CB000C70C7 /* FourQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourQuestionViewController.swift; sourceTree = "<group>"; };
 		8D48CADF2729C703000C70C7 /* FiveQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveQuestionViewController.swift; sourceTree = "<group>"; };
 		8D48CAE12729C8AC000C70C7 /* ResultScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultScreenViewController.swift; sourceTree = "<group>"; };
+		8D8B714B272AC5DD00983B00 /* CatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatViewController.swift; sourceTree = "<group>"; };
 		8DEC346B272870BC00AAD13E /* homework2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = homework2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEC346E272870BC00AAD13E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8DEC3475272870BC00AAD13E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,18 +51,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8D48CADC2729BF70000C70C7 /* testWindows */ = {
+		8D48CADC2729BF70000C70C7 /* DogTestWindows */ = {
 			isa = PBXGroup;
 			children = (
-				8DEC3474272870BC00AAD13E /* Main.storyboard */,
 				8D48CADF2729C703000C70C7 /* FiveQuestionViewController.swift */,
 				8D48CADD2729C3CB000C70C7 /* FourQuestionViewController.swift */,
 				8D48CADA2729BF32000C70C7 /* ThreeQuestionViewController.swift */,
 				8D48CAD82729AE2C000C70C7 /* TwoQuestionViewController.swift */,
 				8D48CAD227298D7B000C70C7 /* OneQuestionViewController.swift */,
 				8D48CAE12729C8AC000C70C7 /* ResultScreenViewController.swift */,
+				8D8B714B272AC5DD00983B00 /* CatViewController.swift */,
+				8D48CAD027298D36000C70C7 /* DogViewController.swift */,
 			);
-			name = testWindows;
+			name = DogTestWindows;
 			sourceTree = "<group>";
 		};
 		8DEC3462272870BC00AAD13E = {
@@ -86,9 +89,9 @@
 				8DEC3477272870BD00AAD13E /* Assets.xcassets */,
 				8DEC3479272870BD00AAD13E /* LaunchScreen.storyboard */,
 				8DEC347C272870BD00AAD13E /* Info.plist */,
-				8D48CAD027298D36000C70C7 /* CatViewController.swift */,
 				8D48CAD6272994DC000C70C7 /* QwuestionBuilder.swift */,
-				8D48CADC2729BF70000C70C7 /* testWindows */,
+				8DEC3474272870BC00AAD13E /* Main.storyboard */,
+				8D48CADC2729BF70000C70C7 /* DogTestWindows */,
 			);
 			path = homework2;
 			sourceTree = "<group>";
@@ -167,7 +170,8 @@
 				8D48CAE02729C703000C70C7 /* FiveQuestionViewController.swift in Sources */,
 				8D48CADE2729C3CB000C70C7 /* FourQuestionViewController.swift in Sources */,
 				8DEC346F272870BC00AAD13E /* AppDelegate.swift in Sources */,
-				8D48CAD127298D36000C70C7 /* CatViewController.swift in Sources */,
+				8D8B714C272AC5DD00983B00 /* CatViewController.swift in Sources */,
+				8D48CAD127298D36000C70C7 /* DogViewController.swift in Sources */,
 				8D48CAD327298D7B000C70C7 /* OneQuestionViewController.swift in Sources */,
 				8D48CAD7272994DC000C70C7 /* QwuestionBuilder.swift in Sources */,
 				8D48CAE22729C8AC000C70C7 /* ResultScreenViewController.swift in Sources */,

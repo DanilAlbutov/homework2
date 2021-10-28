@@ -15,18 +15,16 @@ class OneQuestionViewController: UIViewController {
     var questionsContainer: QwuestionBuilder!
     var resultAns = ""
     var rightAns = "Джеĸ-а-Пу"
-    
+    var isTestAboutDogs = true
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        checkTest()
         self.navigationItem.setHidesBackButton(true, animated: true)
         
         
         // Do any additional setup after loading the view.
     }
-    
-    
-    
+        
     @IBAction func onButtonClick(_ sender: UIButton) {
         
         if sender == buttonNext {
@@ -62,11 +60,17 @@ class OneQuestionViewController: UIViewController {
         return res
     }
     
+    func checkTest(){
+        if (!isTestAboutDogs) {
+            rightAns = "Чужой"
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "fromOneQwestionToSecond" {
                     if let question2Controller = segue.destination as?  TwoQuestionViewController{
                         question2Controller.questionsContainer = self.questionsContainer
-                        
+                        question2Controller.isTestAboutDogs = self.isTestAboutDogs
                     }
                 }
     }
